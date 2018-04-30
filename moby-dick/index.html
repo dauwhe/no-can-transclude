@@ -5,13 +5,23 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Moby-Dick</title>
 	<style>
-		iframe { display: none; border: none; width: 100%;}
+	
+			article iframe {
+		height: 100%;
+		}
+		iframe { display: none; }
 		
 		iframe:target { display: block; }
 		
 		/* layout */
+		
+		nav:hover {
+		width: 200px;
+		
+		}
 		nav {
-		display: block;
+		z-index: -1;
+		display: none;
 		position: fixed;
 		top: 50px;
 		 width: 200px;
@@ -19,6 +29,8 @@
 		 height: 100%;
 		 overflow: scroll;
 		   background-color: #eee;
+		  border-top-left-radius: 75px;
+		  border-top-right-radius: 75px;
 		}
 		
 		nav ol {
@@ -31,15 +43,14 @@
 		 height: 100%;
 		
 		}
-		article iframe {
-		height: 100%;
-		}
+
 	</style>
 </head>
 <body>
 <nav id="toc" role="doc-toc">
 	<ol>
-		<li> <a href="#title-page-iframe">Moby-Dick</a> </li>
+	<li><a href="c022.html#fig1" target="c022-iframe">Voyage of the Pequod</a></li>
+		<li> <a href="#title-page-iframe" target="pageFrame">Moby-Dick</a> </li>
 		<li> <a href="#copyright-iframe">Copyright</a> </li>
 		<li> <a href="#introduction-iframe">Etymology.</a> </li>
 		<li> <a href="#epigraph-iframe">Extracts</a> </li>
@@ -324,9 +335,15 @@
 	<iframe name="c136-iframe" id="c136-iframe" src="c136.html"></iframe>
 </article>
 <!--our shims-->
-<script src="../state.js"></script>
+<script src="../personalization.js"></script>
+<!--<script src="../state.js"></script>-->
 <script src="../nav.js"></script>
+
+<script src="../links.js"></script>
+
+<!--
 <script src="../sw.js"></script>
 <script src="../offline.js"></script>
+-->
 </body>
 </html>
